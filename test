@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+import scipy as sp
+import chart_studio.plotly as py
+import plotly.figure_factory as ff
+import plotly.offline as py_offline
+import chart_studio.plotly as py
+import plotly.graph_objects as go
+import plotly.express as px
+data=pd.read_csv("/Users/Tarek Khayat/Desktop/AUB/Visualization/Plotly and Dash/UNdata_Export.csv")
+fig1= px.bar(data,title="Fertility Lebanon VS Africa VS USA",x="Country1", y="Value", color="Country1",
+  animation_frame="Year", animation_group="Country1", range_y=[0,10])
+fig1.show()
